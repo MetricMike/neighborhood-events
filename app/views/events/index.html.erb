@@ -1,6 +1,11 @@
 <div class="content">
   
   <h1>Events</h1>
+  
+  <%= form_tag('/events', method: :get) do %>
+    <div><%= select_tag 'Category', options_for_select(@categories["results"].collect { |c| [c['name'], c['id']] }) %></div>
+    <div><%= submit_tag 'Filter' %></div>
+  <% end %>
    
   <table>
     <tr>
@@ -20,7 +25,10 @@
       <%= event["venue"]["lat"]%>, <%= event["venue"]["lon"]%></td>
     </tr>
     <% end %>
-  <% end %>
-  </table>
+
+
+<% end %>
+
+
 
 </div>
