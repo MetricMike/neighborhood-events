@@ -40,3 +40,5 @@ gem 'spring',        group: :development
 
 gem 'meetup_client'
 gem 'dotenv-rails', groups: [:development, :test]
+gem 'better_errors', groups: [:development, :test]
+gem 'binding_of_caller', groups: [:development, :test]
