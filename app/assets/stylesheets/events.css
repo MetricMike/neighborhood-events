@@ -1,0 +1,29 @@
+.content {
+    margin: 1em auto;
+    max-width: 70%;
+}
+
+h1 {
+    margin-bottom: 1em;
+}
+
+table {
+    width: 100%;
+}
+
+th, td {
+    padding: .5em 1em .5em .5em;
+    border: solid 1px #ddd;
+}
+
+th.title {
+    
+}
+
+th.date {
+    
+}
+
+th.category {
+    
+}

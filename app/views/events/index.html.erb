@@ -1,19 +1,26 @@
-<h1>Events</h1>
- 
-<table>
-  <tr>
-    <th>Venue Name</th>
-    <th>Venue Date</th>
-    <th>Event URL</th>
-  </tr>
- 
-<% @events["results"].each do |event| %>
-  <% if event["venue"] %>
-  <tr>
-    <td><%= event["venue"]["name"] %></td>
-    <td><%= Time.at(event["time"]/1000).strftime("%F") %></td>
-    <td><%= event["event_url"]%></td>
-  </tr>
+<div class="content">
+  
+  <h1>Events</h1>
+   
+  <table>
+    <tr>
+      <th scope="col" class="title">Event & Venue</th>
+      <th scope="col" class="date">Date</th>
+      <th scope="col" class="location">Location</th>
+    </tr>
+   
+  <% @events["results"].each do |event| %>
+    <% if event["venue"] %>
+    <tr>
+      <td><a href="<%= event["event_url"]%>"><%= event["name"] %></a><br />
+      <%= event["venue"]["name"]%></td>
+      <td><%= Time.at(event["time"]/1000).strftime("%B %-m, %Y") %></td>
+      <td><%= event["venue"]["address_1"]%><br />
+      <%= event["venue"]["city"]%>, <%= event["venue"]["state"]%> <%= event["venue"]["zip"]%><br />
+      <%= event["venue"]["lat"]%>, <%= event["venue"]["lon"]%></td>
+    </tr>
+    <% end %>
   <% end %>
-<% end %>
-</table>
+  </table>
+
+</div>
