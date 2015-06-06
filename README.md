@@ -1,24 +1,16 @@
+## Installation with Cloud9
 
-     ,-----.,--.                  ,--. ,---.   ,--.,------.  ,------.
-    '  .--./|  | ,---. ,--.,--. ,-|  || o   \  |  ||  .-.  \ |  .---'
-    |  |    |  || .-. ||  ||  |' .-. |`..'  |  |  ||  |  \  :|  `--, 
-    '  '--'\|  |' '-' ''  ''  '\ `-' | .'  /   |  ||  '--'  /|  `---.
-     `-----'`--' `---'  `----'  `---'  `--'    `--'`-------' `------'
-    ----------------------------------------------------------------- 
+If you do not want to go through the trouble of installing Rails on your machine, you can easily set up the development environment with [Cloud9](https://c9.io/). After forking the neighborhood-events repo, sign up for a free Cloud9 account using your Github credentials.
 
+Your fork of neighborhood-events should appear on the left side of your Cloud9 dashboard under 'Projects on Github.' Select it and click 'Clone to Edit.' Choose the pre-configured Ruby on Rails environment. The neighborhood-events fork will now be listed under 'My Projects.' Once cloned, click 'Start Editing.'
 
-Welcome to your Rails project on Cloud9 IDE!
+To continue using git, run the following in your workspace terminal:
 
-To get started, just do the following:
+    git remote add neighborhood-events 'git@github.com:[github username]/neighborhood-events'
 
-1. Run the project with the "Run Project" button in the menu bar on top of the IDE.
-2. Preview your new app by clicking on the URL that appears in the Run panel below (https://neighborhood-events-metricmike.c9.io/).
+You should now be able to get the application up by running:
 
-Happy coding!
-The Cloud9 IDE team
+    bundle install
+    rails s -b $IP -p $PORT
 
-
-## Support & Documentation
-
-Visit http://docs.c9.io for support, or to learn more about using Cloud9 IDE. 
-To watch some training videos, visit http://www.youtube.com/user/c9ide
+Navigate to http://neighborhood-events-c9-[username].c9.io to see your app.
