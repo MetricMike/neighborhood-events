@@ -1,0 +1,19 @@
+<h1>Events</h1>
+ 
+<table>
+  <tr>
+    <th>Venue Name</th>
+    <th>Venue Date</th>
+    <th>Event URL</th>
+  </tr>
+ 
+<% @events["results"].each do |event| %>
+  <% if event["venue"] %>
+  <tr>
+    <td><%= event["venue"]["name"] %></td>
+    <td><%= Time.at(event["time"]/1000).strftime("%F") %></td>
+    <td><%= event["event_url"]%></td>
+  </tr>
+  <% end %>
+<% end %>
+</table>
